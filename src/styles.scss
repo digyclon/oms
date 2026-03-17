@@ -1,0 +1,182 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Custom theme colors (Metronic 7 / IPAS - Core style)
+$primary: #3699FF;
+$secondary: #E5EAEE;
+$success: #1BC5BD;
+$info: #8950FC;
+$warning: #FFA800;
+$danger: #F64E60;
+$light: #F3F6F9;
+$dark: #181C32;
+$white: #ffffff;
+
+// Metronic 7 Background Colors
+$bg-light: #F3F6F9;
+$bg-white: #ffffff;
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Import FontAwesome
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
+// Quill Styles
+@import "quill/dist/quill.snow.css";
+@import "quill/dist/quill.bubble.css";
+@import "quill/dist/quill.core.css";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', 'Helvetica', sans-serif;
+  background-color: #f5f8fa;
+  margin: 0;
+  color: #3F4254;
+}
+
+// Full page base
+.flex-column-fluid {
+  flex: 1 0 auto;
+}
+
+.flex-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// Utility classes matching Metronic / IPAS - Core
+.font-weight-bolder { font-weight: 700 !important; }
+.font-weight-bold { font-weight: 600 !important; }
+.font-weight-medium { font-weight: 500 !important; }
+.font-weight-normal { font-weight: 400 !important; }
+.font-weight-light { font-weight: 300 !important; }
+
+.font-size-h1 { font-size: 2rem !important; }
+.font-size-h2 { font-size: 1.75rem !important; }
+.font-size-h3 { font-size: 1.5rem !important; }
+.font-size-h4 { font-size: 1.35rem !important; }
+.font-size-h5 { font-size: 1.15rem !important; }
+.font-size-h6 { font-size: 1.075rem !important; }
+
+.font-size-sm { font-size: 0.9rem !important; }
+.font-size-xs { font-size: 0.8rem !important; }
+
+.card.card-custom {
+  border: 0;
+  box-shadow: 0 0 30px 0 rgba(82, 63, 105, 0.05);
+  border-radius: 0.42rem;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 70px;
+    padding: 0 2.25rem;
+    background-color: transparent;
+    border-bottom: 1px solid #ebedf3;
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem;
+      margin-left: 0;
+
+      .card-label {
+        font-weight: 500;
+        font-size: 1.275rem;
+        color: #181C32;
+        margin: 0;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 2rem 2.25rem;
+  }
+}
+
+.btn {
+  border-radius: 0.42rem;
+  padding: 0.65rem 1rem;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+
+  &:hover, &:focus, &:active {
+    background-color: darken($primary, 8%) !important;
+    border-color: darken($primary, 8%) !important;
+    color: $white !important;
+  }
+}
+
+.text-dark-75 { color: #3F4254 !important; }
+.text-dark-50 { color: #7E8299 !important; }
+.text-muted { color: #B5B5C3 !important; }
+
+.bg-light-primary { background-color: #E1F0FF !important; color: $primary !important; }
+.bg-light-success { background-color: #C9F7F5 !important; color: $success !important; }
+.bg-light-info { background-color: #EEE5FF !important; color: $info !important; }
+.bg-light-warning { background-color: #FFF4DE !important; color: $warning !important; }
+.bg-light-danger { background-color: #FFE2E5 !important; color: $danger !important; }
+
+.symbol {
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 0.42rem;
+
+  .symbol-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.42rem;
+    background-color: $bg-light;
+    color: #3F4254;
+    font-weight: 500;
+  }
+
+  &.symbol-35 {
+    width: 35px;
+    height: 35px;
+    .symbol-label {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &.symbol-45 {
+    width: 45px;
+    height: 45px;
+    .symbol-label {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &.symbol-120 {
+    width: 120px;
+    height: 120px;
+    .symbol-label {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
